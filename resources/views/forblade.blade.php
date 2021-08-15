@@ -38,3 +38,24 @@
 @endif
 
 @endforeach
+
+
+
+
+@include('inner')
+@foreach($users as $uu)
+    <h3>{{$uu}}</h3>
+@endforeach
+
+
+
+<script>
+    var data=@json($users);
+    console.warn(data);
+</script>
+
+
+
+@csrf
+
+@include('headers')

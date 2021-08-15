@@ -79,4 +79,9 @@ use App\Http\Controllers\userscontrollerforblade;
 //blade
 Route::get('forblade',[userscontrollerforblade::class,'viewload']);
 
-
+//form
+use App\Http\Controllers\userformcontroller;
+Route::post('form',[userformcontroller::class,'getdata']);
+Route::get('userform',function(){
+    return view('userform');
+});
